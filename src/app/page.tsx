@@ -6,20 +6,20 @@ function Flashcard() {
   const [showAnswer, setShowAnswer] = useState(false);
   return (
     <div className="bg-slate-500 rounded-xl shadow-md md:w-[550px]">
-      <div 
-      onClick={() => setShowAnswer(!showAnswer)}
-      className="cursor-pointer flex flex-col items-center justify-center gap-4 p-5"
+      <div
+        onClick={() => setShowAnswer(!showAnswer)}
+        className="cursor-pointer flex flex-col items-center justify-center gap-4 p-5"
       >
         {showAnswer ? (
           <>
             <p>Answer</p>
-            <Image src="/focused.png" width={300} height={300} alt="Meme" />
+            <Image src="/images/focused.png" width={300} height={300} alt="Meme" />
           </>
         ) : (
           <>
             <p>Question</p>
             <Image
-              src="/public_speaking.png"
+              src="/images/public_speaking.png"
               width={300}
               height={300}
               alt="Meme"
@@ -33,13 +33,11 @@ function Flashcard() {
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center gap-6 p-5">
+    <div className="min-h-screen flex flex-col items-center gap-6 p-5">
       <div>
-        <h1 className="text-4xl font-bold">Flashcards</h1>
+        <h1 className="text-4xl font-bold">Blog</h1>
       </div>
-      <div>
-        <Flashcard />
-      </div>
-    </main>
+      
+    </div>
   );
 }
